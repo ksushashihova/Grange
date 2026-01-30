@@ -2,7 +2,6 @@ const carousel = document.querySelector('.carousel ul');
 const leftBtn = document.querySelector('.scroll-btn.left');
 const rightBtn = document.querySelector('.scroll-btn.right');
 
-// Получаем ширину первой карточки + gap
 const getScrollAmount = () => {
   const firstCard = carousel.querySelector('li');
   const style = window.getComputedStyle(firstCard);
@@ -12,9 +11,16 @@ const getScrollAmount = () => {
 };
 
 leftBtn.addEventListener('click', () => {
-  carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  const scrollAmount = getScrollAmount();
+  carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
 
 rightBtn.addEventListener('click', () => {
-  carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  const scrollAmount = getScrollAmount();
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  if (carousel.scrollLeft + scrollAmount > maxScroll) {
+    carousel.scrollTo({ left: maxScroll, behavior: 'smooth' });
+  } else {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
 });
