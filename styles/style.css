@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Grenze Gotisch", "Amatic SC", serif;
+  font-family: "Grenze Gotisch", "Triodion", system-ui;
   line-height: 1.5;
   background: #fff;
   color: #111;
@@ -39,9 +39,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 30px;
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-family: "Triodion", system-ui;
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -61,7 +60,7 @@ body {
   color: #000000;
   margin-right: 1.5rem;
   text-decoration: none;
-  font-weight: bold;
+  
   font-size: clamp(1rem, 0.3571rem + 2.8571vw, 2.5rem);
 }
 
@@ -83,10 +82,10 @@ body {
   position: relative;        /* для абсолютного центрирования кнопки */            /* если нужно центрирование по высоте всей страницы */
   
   color: #000000; 
-  font-weight: bold;
+  
   font-size: 20px;  
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 700;
+  font-family: "Triodion", system-ui;
+
   font-style: normal;      /* немного отступов по бокам */
 }
 
@@ -105,7 +104,7 @@ body {
 .hero h1 {
   font-size: clamp(3.75rem, 1.7826rem + 8.8424vw, 10.625rem);
   padding-top: 200px;
-  font-weight: normal;
+  
 }
 
 .btn {
@@ -174,7 +173,7 @@ body {
   margin-bottom: 20px;
 }
 .service-card img {
-  width: 100px;
+  width: 200px;
   height: auto;
 }
 
@@ -216,7 +215,7 @@ body {
 .prices li {
   flex: 0 0 auto;           /* чтобы элементы не сжимались */
   margin: 0.5rem 0;
-  font-weight: bold;
+  
 }
 
 .prices li img {
@@ -357,15 +356,15 @@ body {
  
 }
 
-l img {
-  width: 300px;
+.ol img {
+  width: 500px;
   
   object-fit: cover;        /* чтобы картинки не искажались */
   border-radius: 8px;       /* если хочешь скругление */
 }
 
 .ol p {
-  
+  width: clamp(18.75rem, 13.3929rem + 23.8095vw, 31.25rem);
   font-size: clamp(0.9375rem, 0.5357rem + 1.7857vw, 1.875rem);
 }
 
@@ -444,15 +443,16 @@ l img {
   }
 
   /* About */
-  l {
+  .ol {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
   .ol img {
-    width: 100%;
-    max-width: 300px;
+    width: 200px;
+    height: auto;
+    
   }
 
   

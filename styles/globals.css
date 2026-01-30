@@ -39,7 +39,7 @@ picture {
 button,
 a {
   color: currentColor;
-  font-family: inherit;
+  font-family: "Triodion", system-ui;
   font-size: inherit;
   line-height: inherit;
 }
