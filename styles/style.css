@@ -12,10 +12,13 @@
 body {
   font-family: "Grenze Gotisch", "Muller", system-ui;
   line-height: 1.5;
-  background: #fff;
+  background-image: url('/images/pover.png');
+  background-size: cover;
+  background-attachment: fixed;
   color: #111;
 
   min-width: 320px;
+
   
 }
 
@@ -64,7 +67,7 @@ body {
   margin-right: 1.5rem;
   text-decoration: none;
   
-  font-size: clamp(0.9375rem, 0.5357rem + 1.7857vw, 1.875rem);
+  font-size: clamp(0.9375rem, 0.6696rem + 1.1905vw, 1.5625rem);
 }
 
 .nav a:hover {
@@ -96,6 +99,10 @@ body {
   font-style: normal;      /* немного отступов по бокам */
 }
 
+ .hero-image p {
+  font-size: clamp(0.625rem, 0.2768rem + 1.5476vw, 1.4375rem);
+ }
+
 .hero-image .btn {
   position: absolute;
   left: 50%;
@@ -116,8 +123,8 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: white;
+  padding: 0.4rem 1rem;
+  background: rgb(232, 229, 229, 0.7);
   box-shadow:
     0 4px 6px rgba(164, 157, 157, 0.1),   /* мягкая тень снизу */
     0 8px 20px rgba(237, 107, 107, 0.7);  /* более размытая тень для глубины */
@@ -128,7 +135,7 @@ body {
   color: #000000;
   text-decoration: none;
   border: 2px solid #000000;
-  font-size: clamp(1.25rem, 1.1161rem + 0.5952vw, 1.5625rem);
+  font-size: clamp(0.9375rem, 0.6696rem + 1.1905vw, 1.5625rem);
   
 }
 
@@ -155,12 +162,7 @@ body {
   align-items: center;
 
   gap: 5px;
-  background: linear-gradient(145deg, #585252, #e0adad); /* легкий градиент для объема */
-  border-radius: 20px;   
-  box-shadow:
-    0 4px 6px rgba(164, 157, 157, 0.1),   /* мягкая тень снизу */
-    0 8px 20px rgba(237, 107, 107, 0.7);  /* более размытая тень для глубины */
-
+  
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* анимация при наведении */
 
   margin-left:  clamp(1.25rem, -0.8929rem + 9.5238vw, 6.25rem);
@@ -171,12 +173,7 @@ body {
 
   
 }
-.df:hover {
-  transform: translateY(-5px);       /* приподнимаем карточку */
-  box-shadow:
-    0 10px 15px rgba(0,0,0,0.15),
-    0 20px 30px rgba(0,0,0,0.1);
-}
+
 
 h2 {
   font-size: clamp(1.875rem, 1.0714rem + 3.5714vw, 3.75rem);
@@ -226,7 +223,7 @@ h2 {
 
 .dh p {
   font-size: clamp(0.4375rem, -0.0446rem + 2.1429vw, 1.5625rem);
-  color: rgb(16, 15, 15);
+  color: rgb(0, 0, 0);
 }
 .dh {
   display: flex;
@@ -311,6 +308,7 @@ h2 {
 .contact {
   display: flex;
   flex-direction: column;
+  
 
 }
 
@@ -319,11 +317,14 @@ h2 {
   align-items: stretch;   /* 🔥 растягиваем по высоте */
   justify-content: center;
   position: relative;
-  padding: 0 10px 10px;
+  padding: 0 25px 25px;
+  height: 400px;
+  
 }
 /* Фото */
 .co img {
   width: 40%;
+  height: 100%;
   aspect-ratio: 3/3;
   object-fit: cover;
 
@@ -334,6 +335,7 @@ h2 {
 .map-wrapper {
   position: relative;
   width: 100%;
+  height: 100%;
   display: flex;
 }
 
@@ -425,7 +427,7 @@ h2 {
 
 .price-list li {
   display: flex;
-  color: white;
+  color: rgb(0, 0, 0);
   justify-content: space-between;
   border-bottom: #ab0808 dashed 1px;
   
@@ -728,7 +730,7 @@ h2 {
 }
 
 .dh p {
-  font-size: 30px;
+  font-size: 25px;
 
 }
 .card {
