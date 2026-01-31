@@ -1,6 +1,6 @@
 /* Reset */
 * {
-  box-sizing: border-box;
+  
   margin: 0;
   padding: 0;
  
@@ -165,7 +165,7 @@ body {
 
   margin-left:  clamp(1.25rem, -0.8929rem + 9.5238vw, 6.25rem);
   margin-right: clamp(1.25rem, -0.8929rem + 9.5238vw, 6.25rem);
-  padding: 5px;
+  padding: 20px;
   
   
 
@@ -216,10 +216,10 @@ h2 {
   
 }
 .card img {
-  width: 15%;
+  width: 20%;
   height: auto;
   display: block;       /* нужно для margin auto */
-       /* горизонтальное центрирование */
+  margin: 0 auto; 
 }
 
 
@@ -311,6 +311,7 @@ h2 {
 .contact {
   display: flex;
   flex-direction: column;
+
 }
 
 .co {
@@ -318,7 +319,7 @@ h2 {
   align-items: stretch;   /* 🔥 растягиваем по высоте */
   justify-content: center;
   position: relative;
-  padding: 20px;
+  padding: 0 10px 10px;
 }
 /* Фото */
 .co img {
@@ -332,7 +333,7 @@ h2 {
 /* Обёртка карты */
 .map-wrapper {
   position: relative;
-  width: 40%;
+  width: 100%;
   display: flex;
 }
 
@@ -347,7 +348,7 @@ h2 {
 .map-overlay {
   position: absolute;
   
-  left: clamp(2.5rem, -1.25rem + 16.6667vw, 11.25rem);
+  left: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -688,4 +689,52 @@ h2 {
 /* скрываем скроллбар */
 .carousel ul::-webkit-scrollbar {
   display: none;
+}
+
+
+@media (width < 700px) {
+  .card {
+  display: flex;
+  flex-direction: column-reverse;
+  
+}
+
+.df .card:nth-child(2) img {
+  display: none;
+}
+.df .card:nth-child(3) img {
+  display: none;
+}
+.df .card:nth-child(1) .dh,
+.df .card:nth-child(3) .dh,
+.df .card:nth-child(2) .dh {
+  border: none;
+}
+.card img {
+  width: 30%;
+}
+.price-list li {
+
+
+  
+  gap: 10px;
+  
+
+  
+  font-size: 20px;
+  
+ /* чтобы показывать интерактивность */
+
+}
+
+.dh p {
+  font-size: 30px;
+
+}
+.card {
+  gap: 5px;
+}
+.df {
+  padding: 5px;
+}
 }
