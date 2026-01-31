@@ -1,9 +1,12 @@
-
-/* ================= RESET ================= */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ 
+  
+  
+  
 }
 
 body {
@@ -11,179 +14,688 @@ body {
   line-height: 1.5;
   background: #fff;
   color: #111;
+
   min-width: 320px;
+  
 }
 
-/* ================= HEADER ================= */
+
+/* Header */
 .header {
-  background: url(../images/1.png) center/contain no-repeat;
+  background-image: url(../images/1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  
+  text-align: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
+  justify-content: space-around
+  
+  
+  
 }
 
 .nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
+  
+  z-index: 1000;
   display: flex;
   justify-content: center;
   gap: 30px;
-  z-index: 1000;
+ 
   backdrop-filter: blur(5px);
+
 }
 
 .nav a {
-  color: #000;
+  color: #000000;
+  margin-right: 1.5rem;
   text-decoration: none;
+  
   font-size: clamp(0.9375rem, 0.5357rem + 1.7857vw, 1.875rem);
 }
 
-/* ================= HERO ================= */
-.hero {
-  text-align: center;
+.nav a:hover {
   color: #de3131;
 }
 
-.hero h1 {
-  font-size: clamp(3.75rem, 1.7826rem + 8.8424vw, 10.625rem);
-  padding-top: 200px;
-}
+/* Hero */
+.hero {
+  text-align: center;
+  
 
+  color: #de3131;
+  
+  
+  
+}
 .hero-image {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  font-size: 20px;
-  font-style: normal;
-  color: #000;
+  align-items: center;       /* вертикальное выравнивание */
+  justify-content: center; 
+
+  position: relative;        /* для абсолютного центрирования кнопки */            /* если нужно центрирование по высоте всей страницы */
+  
+  color: #000000; 
+  
+  font-size: 20px;  
+
+
+  font-style: normal;      /* немного отступов по бокам */
 }
 
 .hero-image .btn {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* ровно центр */
 }
 
 .adres {
-  margin-left: 310px;
+  margin-left:310px;
+
+}
+
+.hero h1 {
+  font-size: clamp(3.75rem, 1.7826rem + 8.8424vw, 10.625rem);
+  padding-top: 200px;
+  
 }
 
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
+  background: white;
+  box-shadow:
+    0 4px 6px rgba(164, 157, 157, 0.1),   /* мягкая тень снизу */
+    0 8px 20px rgba(237, 107, 107, 0.7);  /* более размытая тень для глубины */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+/* анимация при наведении */
+
+  color: #000000;
   text-decoration: none;
-  border: 2px solid #000;
+  border: 2px solid #000000;
   font-size: 30px;
+  
 }
 
-/* ================= SERVICES ================= */
+.btn:hover {
+  background: rgba(222, 49, 49, 0.1); /* лёгкая красная подсветка */
+  color: #de3131;
+
+  /* Эффект нажатия: тень «втягивается» */
+  box-shadow: 0 2px 4px rgba(164, 157, 157, 0.1), 0 4px 10px rgba(237, 107, 107, 0.5);
+}
+.btn:active {
+  /* Продавление кнопки */
+  transform: translateY(0.5px);   /* элемент опускается вниз */
+  box-shadow: 0 1px 2px rgba(164,157,157,0.1), 0 2px 5px rgba(237,107,107,0.5);
+  
+}
+
+
 .services {
-  background: linear-gradient(rgba(255, 255, 255, 0.9)), url(../images/paper.jpg) center/cover no-repeat;
+  height: 100vh;
+}
+.df {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+  background: linear-gradient(145deg, #585252, #e0adad); /* легкий градиент для объема */
+  border-radius: 20px;   
+  box-shadow:
+    0 4px 6px rgba(164, 157, 157, 0.1),   /* мягкая тень снизу */
+    0 8px 20px rgba(237, 107, 107, 0.7);  /* более размытая тень для глубины */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* анимация при наведении */
+
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 5px;
+  
+  
+
+  
+}
+.df:hover {
+  transform: translateY(-5px);       /* приподнимаем карточку */
+  box-shadow:
+    0 10px 15px rgba(0,0,0,0.15),
+    0 20px 30px rgba(0,0,0,0.1);
 }
 
 h2 {
-  font-size: clamp(2.5rem, 1.4268rem + 4.8232vw, 6.25rem);
+  font-size: 60px;
   color: rgb(222, 49, 49);
-  margin-bottom: 20px;
+  
   text-align: center;
   
 }
 
-.df {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
-}
-
-.df .service-card:last-child {
-  grid-column: 1 / -1;
-  justify-self: center;
-}
-
-.service-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.service-card img {
-  width: 200px;
-  height: auto;
-}
-
-.service-card p {
-  font-size: 50px;
-  color: rgb(222, 49, 49);
-}
 
 .ee {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center; 
+  flex-direction: column;
   overflow: hidden;
+  
 }
 
-.dh {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.service-card img {
+  width: 500px;
+  height: auto;
 }
+
+
 
 .red-line {
   border: none;
   height: 2px;
   background: red;
-  width: calc(100% + 60px); /* если .services имеет padding: 0 30px */
-  margin: 0 -30px;           /* компенсируем padding контейнера */
+  width: 50%;
+  margin: 0 auto;
 }
 
-/* ================= PRICES ================= */
+.service-card {
+ display: flex;
+
+  
+
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  
+}
+.card img {
+  width: 250px;
+  height: auto;
+  display: block;       /* нужно для margin auto */
+  margin: 0 auto;       /* горизонтальное центрирование */
+}
+
+
+
+.dh p {
+  font-size: 30px;
+  color: rgb(16, 15, 15);
+}
+.dh {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-right: #b71c1c 1px solid;
+  padding: 10px;
+  
+}
+.df .card:nth-child(2) .dh {
+  border-right:none;
+  border-left: 1px solid #b71c1c; /* или другой стиль */
+  padding: 10px;
+}
+
 .prices {
   position: relative;
   padding: 0 30px;
+  height: 100vh;
+  
+  
 }
 
 .prices ul {
   display: flex;
+  flex-direction: row;      /* элементы в ряд */
   gap: 40px;
+  overflow-x: auto;         /* горизонтальный скролл */
+  scroll-behavior: smooth;  /* плавный скролл */
+  list-style: none;
+  margin: 0;
+  
+}
+
+.prices ul::-webkit-scrollbar {
+  display: none; /* скрываем стандартный скролл */
+}
+
+.prices li {
+  flex: 0 0 auto;           /* чтобы элементы не сжимались */
+  margin: 0.5rem 0;
+  
+}
+
+.prices li img {
+  width: 100%;          /* фото занимает всю ширину карточки */
+  height: auto;         /* сохраняем пропорции */
+  max-height: 80vh;     /* чтобы фото не выходило за экран */
+  object-fit: cover;    /* обрезка, чтобы фото заполнило контейнер без искажения */
+  border-radius: 10px;
+}
+
+/* Стрелки */
+.scroll-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  background: rgba(222, 49, 49,0.9);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 50px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+
+
+/* Contact на весь экран */
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.co {
+  display: flex;
+  align-items: stretch;   /* 🔥 растягиваем по высоте */
+  justify-content: center;
+
+  padding: 20px;
+}
+/* Фото */
+.co img {
+  width: 40%;
+  aspect-ratio: 3/3;
+  object-fit: cover;
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Обёртка карты */
+.map-wrapper {
+  position: relative;
+  width: 40%;
+  display: flex;
+}
+
+/* Карта */
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Блок поверх карты */
+.map-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background: rgba(255,255,255,1);
+  padding: 20px 25px;
+  border-radius: 8px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+
+
+
+.about ul {
+   display: grid;
+  grid-template-columns: repeat(4, 200px); 
+  justify-content: center;                 /* центрируем сетку горизонтально */
+  align-content: center; /* 3 колонки одинаковой ширины */
+                  /* ряды одинаковой высоты */
+  gap: 100px; 
+  
+  
+  
+
+}
+.about li {
+  list-style: none; 
+}
+.about  li img {
+  width: 80%;     /* растягиваем картинку на всю ячейку */
+   /* чтобы занимала всю высоту ячейки */
+  object-fit: cover; /* обрезаем по пропорциям, не искажая */
+  border-radius: 8px; /* если нужны скругления */
+}
+
+/* Footer */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  
+}
+
+
+.service-card {
+  list-style: none;
+  text-decoration: dashed;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  text-align: start;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0); /* легкий градиент для объема */
+  border-radius: 20px;   
+  box-shadow:
+    0 4px 6px rgba(164, 157, 157, 0.1),   /* мягкая тень снизу */
+    0 8px 20px rgba(237, 107, 107, 0.7);  /* более размытая тень для глубины */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* анимация при наведении */
+  padding: 10px;
+}
+.service-card:hover {
+  transform: translateY(-5px);       /* приподнимаем карточку */
+  box-shadow:
+    0 10px 15px rgba(0,0,0,0.15),
+    0 }
+
+
+
+
+.price-list li {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  border-bottom: #ab0808 dashed 1px;
+  
+  gap: 30px;
+  
+
+  width: clamp(18.75rem, 13.3929rem + 23.8095vw, 31.25rem);
+  font-size: 17px;
+  
+
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer; /* чтобы показывать интерактивность */
+
+}
+
+
+/* Наведение */
+.price-list li:hover {
+  background: rgba(222, 49, 49, 0.1); /* лёгкая красная подсветка */
+  color: #de3131;
+}
+
+/* Клик/выбор */
+.price-card .price-list li:active {
+  background: rgba(222, 49, 49, 0.2); /* более насыщенная подсветка */
+  color: #b71c1c; /* чуть темнее */
+}
+.df .service-card:last-child {
+  grid-column: 1 / -1;  /* занять всю строку */
+  justify-self: center;  /* центрировать карточку */
+}
+
+
+
+
+
+
+.bold {
+  color: rgba(222, 49, 49,0.9);
+}
+.ol {
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  gap: 10px
+  
+  
+}
+.ol img{
+  width: 30%;
+  
+}
+
+.contact .btn {
+  display: inline-block;
+  padding: 10px;
+  background: rgb(207, 52, 52);
+  box-shadow:
+    0 4px 6px rgba(164, 157, 157, 0.1),   /* мягкая тень снизу */
+    0 8px 20px rgba(237, 107, 107, 0.7);  /* более размытая тень для глубины */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+/* анимация при наведении */
+
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid #000000;
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+.btn:hover {
+  background: rgba(222, 49, 49, 0.1); /* лёгкая красная подсветка */
+  color: #de3131;
+
+  /* Эффект нажатия: тень «втягивается» */
+  box-shadow: 0 2px 4px rgba(164, 157, 157, 0.1), 0 4px 10px rgba(237, 107, 107, 0.5);
+}
+.btn:active {
+  /* Продавление кнопки */
+  transform: translateY(0.5px);   /* элемент опускается вниз */
+  box-shadow: 0 1px 2px rgba(164,157,157,0.1), 0 2px 5px rgba(237,107,107,0.5);
+  
+}
+
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 1024px) {
+
+  /* Навигация */
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 5px;
+  }
+
+  
+
+ 
+
+  
+
+  .hero-image {
+    
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .hero-image .btn {
+    position: static;
+    transform: none;
+  }
+
+  .adres {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 4px 20px;
+  }
+
+  
+
+  .df {
+    grid-template-columns: 1fr; /* ОДНА колонка */
+    gap: 40px;
+  }
+
+  .service-card img {
+    width: 80px;
+  }
+
+  
+  
+
+  /* Works */
+  .prices {
+    height: auto;
+  }
+
+  .prices li img {
+    width: 260px;
+    height: 340px;
+  }
+
+  .scroll-btn {
+    width: 35px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  /* About */
+  .ol {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ol img {
+    width: 200px;
+    height: auto;
+    
+  }
+
+  
+
+  /* Partners */
+  .about ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about li img {
+    width: 100px;
+  }
+
+
+  /* Блок поверх карты */
+.map-overlay {
+  position: absolute; /* делаем поверх */
+  top: 3px;          /* отступ сверху */
+  left: 3px;         /* отступ слева */
+  background: rgba(255, 255, 255, 1); /* полупрозрачный фон, чтобы текст был читаемым */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+
+}
+
+  h2 {
+  
+  margin-bottom: 0px
+  
+}
+
+.about h2 {
+  
+  margin-bottom: 20px
+  
+  
+
+}}
+
+#prices {
+  height: 100vh;                 /* блок на всю высоту экрана */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  flex: 1;                       /* растягиваем карусель на оставшееся место */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel ul {
+  display: flex;
+  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   list-style: none;
   margin: 0;
+  padding: 0;
+  height: 100%;                  /* чтобы фото растягивались по высоте блока */
 }
 
-.prices ul::-webkit-scrollbar {
-  display: none;
-}
-
-.prices li {
+.carousel li {
   flex: 0 0 auto;
-  margin: 0.5rem 0;
+  height: 100%;                  /* каждая карточка растягивается по высоте карусели */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.prices li img {
-  width: 500px;
-  height: 600px;
-  object-fit: cover;
+.carousel li img {
+  height: 80vh;                  /* фото подстраивается под экран */
+  width: auto;                    /* сохраняем пропорции */
+  object-fit: cover;              /* обрезка без искажения */
   border-radius: 8px;
 }
 
 .scroll-btn {
   position: absolute;
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
-  background: rgba(222, 49, 49, 0.9);
+  background: rgba(222, 49, 49, 0.8);
   color: #fff;
   border: none;
   font-size: 2rem;
@@ -194,159 +706,10 @@ h2 {
   border-radius: 5px;
 }
 
-.scroll-btn.left { left: 0; }
-.scroll-btn.right { right: 0; }
+.scroll-btn.left { left: 10px; }
+.scroll-btn.right { right: 10px; }
 
-/* ================= ABOUT ================= */
-.about {
-  padding: 10px;
-}
-
-.about ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  gap: 20px;
-  justify-content: space-around;
-}
-
-.about li img {
-  width: 200px;
-  height: auto;
-}
-
-.map-wrapper {
-  position: relative;
-  margin: 0 auto;
-}
-
-.map-wrapper iframe {
-  width: 100%;
-  height: 400px;
-  border: 0;
-}
-
-.map-overlay {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(255, 255, 255, 1);
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.9);
-}
-
-.map-overlay h3 {
-  margin-bottom: 5px;
-  color: rgba(222, 49, 49, 0.9);
-  font-size: clamp(1.0625rem, 0.4464rem + 2.7381vw, 2.5rem);
-}
-
-.map-overlay p {
-  margin-bottom: 10px;
-  font-size: clamp(0.9375rem, 0.4018rem + 2.381vw, 2.1875rem);
-}
-
-/* ================= PRICE-LIST ================= */
-.price-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.price-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  width: clamp(18.75rem, 13.3929rem + 23.8095vw, 31.25rem);
-  font-size: clamp(0.9375rem, 0.5357rem + 1.7857vw, 1.875rem);
-}
-
-.contact {
-  background: linear-gradient(rgba(255, 255, 255, 0.9)), url(../images/paper.jpg) center/cover no-repeat;
-}
-
-.contact .btn {
-  background: rgba(222, 49, 49, 0.2);
-}
-
-/* ================= OL BLOCK ================= */
-.o {
-  background: linear-gradient(rgba(255,255,255,0.9)), url(../images/paper.jpg) center/cover no-repeat;
-  min-height: 100vh;
-}
-
-.ol {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.ol img {
-  max-width: 30vw;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.ol p {
-  max-width: 400px;
-  font-size: clamp(20px, 1.5vw, 22px);
-  line-height: 1.4;
-}
-
-.bold {
-  color: rgba(222, 49, 49,0.9);
-}
-
-/* ================= FOOTER ================= */
-.footer {
-  padding: 1rem;
-  text-align: center;
-  background: #000;
-  color: #fff;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 1024px) {
-  .nav {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 5px;
-  }
-
-  .hero-image {
-    gap: 15px;
-    font-size: 16px;
-  }
-
-  .hero-image .btn { position: static; transform: none; }
-
-  .adres { margin-left: 0; text-align: center; }
-
-  .btn { font-size: 18px; padding: 4px 20px; }
-
-  .df {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .service-card img { width: 80px; }
-
-  .prices { height: auto; }
-  .prices li img { width: 260px; height: 340px; }
-  .scroll-btn { width: 35px; height: 45px; font-size: 20px; }
-
-  .ol { flex-direction: column; text-align: center; }
-  .ol img { width: 200px; height: auto; }
-
-  .about ul { flex-direction: column; gap: 20px; }
-  .about li img { width: 100px; }
-
-  .map-overlay { top: 3px; left: 3px; padding: 10px; }
-  h2 { margin-bottom: 0; }
-  .about h2 { margin-bottom: 20px; }
+/* скрываем скроллбар */
+.carousel ul::-webkit-scrollbar {
+  display: none;
 }
