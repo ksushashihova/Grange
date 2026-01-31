@@ -128,7 +128,7 @@ body {
   color: #000000;
   text-decoration: none;
   border: 2px solid #000000;
-  font-size: 30px;
+  font-size: clamp(1.25rem, 1.1161rem + 0.5952vw, 1.5625rem);
   
 }
 
@@ -147,16 +147,14 @@ body {
 }
 
 
-.services {
-  height: 100vh;
-}
+
 .df {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 
-  gap: 10px;
+  gap: 5px;
   background: linear-gradient(145deg, #585252, #e0adad); /* легкий градиент для объема */
   border-radius: 20px;   
   box-shadow:
@@ -165,8 +163,8 @@ body {
 
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* анимация при наведении */
 
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left:  clamp(1.25rem, -0.8929rem + 9.5238vw, 6.25rem);
+  margin-right: clamp(1.25rem, -0.8929rem + 9.5238vw, 6.25rem);
   padding: 5px;
   
   
@@ -181,7 +179,7 @@ body {
 }
 
 h2 {
-  font-size: 60px;
+  font-size: clamp(1.875rem, 1.0714rem + 3.5714vw, 3.75rem);
   color: rgb(222, 49, 49);
   
   text-align: center;
@@ -198,10 +196,6 @@ h2 {
   
 }
 
-.service-card img {
-  width: 500px;
-  height: auto;
-}
 
 
 
@@ -213,30 +207,25 @@ h2 {
   margin: 0 auto;
 }
 
-.service-card {
- display: flex;
 
-  
-
-}
 .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: clamp(1.25rem, -0.8929rem + 9.5238vw, 6.25rem);
   
 }
 .card img {
-  width: 250px;
+  width: 15%;
   height: auto;
   display: block;       /* нужно для margin auto */
-  margin: 0 auto;       /* горизонтальное центрирование */
+       /* горизонтальное центрирование */
 }
 
 
 
 .dh p {
-  font-size: 30px;
+  font-size: clamp(0.4375rem, -0.0446rem + 2.1429vw, 1.5625rem);
   color: rgb(16, 15, 15);
 }
 .dh {
@@ -245,7 +234,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   border-right: #b71c1c 1px solid;
-  padding: 10px;
+  padding: clamp(0.3125rem, 0.1786rem + 0.5952vw, 0.625rem);
   
 }
 .df .card:nth-child(2) .dh {
@@ -257,7 +246,7 @@ h2 {
 .prices {
   position: relative;
   padding: 0 30px;
-  height: 100vh;
+ 
   
   
 }
@@ -328,7 +317,7 @@ h2 {
   display: flex;
   align-items: stretch;   /* 🔥 растягиваем по высоте */
   justify-content: center;
-
+  position: relative;
   padding: 20px;
 }
 /* Фото */
@@ -357,29 +346,31 @@ h2 {
 /* Блок поверх карты */
 .map-overlay {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  
+  left: clamp(2.5rem, -1.25rem + 16.6667vw, 11.25rem);
   display: flex;
   flex-direction: column;
   gap: 10px;
 
   background: rgba(255,255,255,1);
-  padding: 20px 25px;
+  padding: clamp(0.1875rem, -0.2679rem + 2.0238vw, 1.25rem);
   border-radius: 8px;
-
+  font-size: clamp(0.4375rem, 0.0893rem + 1.5476vw, 1.25rem);
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 
-
+.about {
+  padding: 20px;
+}
 
 .about ul {
    display: grid;
-  grid-template-columns: repeat(4, 200px); 
+  grid-template-columns: repeat(4, 1fr); 
   justify-content: center;                 /* центрируем сетку горизонтально */
   align-content: center; /* 3 колонки одинаковой ширины */
                   /* ряды одинаковой высоты */
-  gap: 100px; 
+  gap: clamp(1.25rem, -0.8929rem + 9.5238vw, 6.25rem);
   
   
   
@@ -401,6 +392,7 @@ h2 {
   text-align: center;
   background: #000;
   color: #fff;
+  font-size: clamp(0.625rem, 0.0893rem + 2.381vw, 1.875rem);
   
 }
 
@@ -436,11 +428,11 @@ h2 {
   justify-content: space-between;
   border-bottom: #ab0808 dashed 1px;
   
-  gap: 30px;
+  gap: clamp(0.9375rem, -1.3393rem + 10.119vw, 6.25rem);
   
 
-  width: clamp(18.75rem, 13.3929rem + 23.8095vw, 31.25rem);
-  font-size: 17px;
+  
+  font-size: clamp(0.25rem, -0.125rem + 1.6667vw, 1.125rem);
   
 
   transition: background 0.3s, color 0.3s;
@@ -504,7 +496,7 @@ h2 {
   color: #000000;
   text-decoration: none;
   border: 2px solid #000000;
-  font-size: 20px;
+  font-size: clamp(0.625rem, 0.3571rem + 1.1905vw, 1.25rem);
   text-align: center;
   
 }
@@ -557,16 +549,12 @@ h2 {
     text-align: center;
   }
 
-  .btn {
-    font-size: 18px;
-    padding: 4px 20px;
-  }
-
+ 
   
 
   .df {
     grid-template-columns: 1fr; /* ОДНА колонка */
-    gap: 40px;
+    
   }
 
   .service-card img {
@@ -610,25 +598,13 @@ h2 {
   /* Partners */
   .about ul {
     flex-direction: column;
-    gap: 20px;
+    
   }
 
-  .about li img {
-    width: 100px;
-  }
 
 
   /* Блок поверх карты */
-.map-overlay {
-  position: absolute; /* делаем поверх */
-  top: 3px;          /* отступ сверху */
-  left: 3px;         /* отступ слева */
-  background: rgba(255, 255, 255, 1); /* полупрозрачный фон, чтобы текст был читаемым */
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 
-}
 
   h2 {
   
