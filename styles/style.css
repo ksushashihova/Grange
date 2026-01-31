@@ -355,7 +355,7 @@ h2 {
 
   background: rgba(255,255,255,1);
   padding: clamp(0.1875rem, -0.2679rem + 2.0238vw, 1.25rem);
-  border-radius: 8px;
+ 
   font-size: clamp(0.4375rem, 0.0893rem + 1.5476vw, 1.25rem);
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
