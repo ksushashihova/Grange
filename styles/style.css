@@ -13,7 +13,7 @@ body {
   font-family: "Grenze Gotisch", "Muller", system-ui;
   line-height: 1.5;
   background-image: url(../images/pover.png);
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   color: #111;
 
@@ -738,6 +738,9 @@ h2 {
 }
 .df {
   padding: 5px;
+}
+body {
+  background-attachment: scroll;
 }
 
 }
