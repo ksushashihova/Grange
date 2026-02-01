@@ -222,11 +222,12 @@ h2 {
 }
 .dh {
   display: flex;
-  justify-content: center;
+
   flex-direction: column;
-  align-items: center;
+
   border-right: #b71c1c 1px solid;
   padding: clamp(0.3125rem, 0.1786rem + 0.5952vw, 0.625rem);
+
   
 }
 .df .card:nth-child(2) .dh {
@@ -715,11 +716,19 @@ h2 {
 .df .card:nth-child(3) img {
   display: none;
 }
-.df .card:nth-child(1) .dh,
-.df .card:nth-child(3) .dh,
-.df .card:nth-child(2) .dh {
-  border: none;
-}
+.dh {
+    border: none;
+  }
+  .df .card:nth-child(2) .dh {
+    border-right:none;
+    border-left: none;/* или другой стиль */
+    
+  }
+.price-list li {
+    border-bottom: 1px dashed #ab0808; /* если хочешь линии между услугами */
+    border-right: none; 
+    border-left: none;               /* убираем правую, если была */
+  }
 .card img {
   width: 30%;
 }
@@ -727,7 +736,7 @@ h2 {
 
 
   
-  gap: 10px;
+
   
 
   
@@ -735,6 +744,9 @@ h2 {
   
  /* чтобы показывать интерактивность */
 
+}
+.dh {
+  min-width: 100%;
 }
 
 .dh p {
