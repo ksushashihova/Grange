@@ -218,7 +218,7 @@ h2 {
 
 .dh p {
   font-size: clamp(0.4375rem, -0.0446rem + 2.1429vw, 1.5625rem);
-  color: rgb(0, 0, 0);
+  color: rgb(193, 38, 38);
 }
 .dh {
   display: flex;
@@ -288,7 +288,10 @@ h2 {
   border-radius: 5px;
   
 }
+.elfsight-widget {
+  width: 90%;
 
+}
 .scroll-btn.left {
   left: 0;
 }
@@ -344,8 +347,10 @@ h2 {
 /* Блок поверх карты */
 .map-overlay {
   position: absolute;
-  
-  left: 10px;
+  text-align: center;
+  width: 30%;
+  top: 0px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -756,7 +761,7 @@ body {
 
 /* Обёртка карты */
 .map-overlay {
-    left: 15%;
+
     transform: translateX(-50%);
     
   }
