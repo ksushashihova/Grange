@@ -333,7 +333,7 @@ h2 {
 
 /* Обёртка карты */
 .map-wrapper {
-  position: relative;
+  
   width: 100%;
   height: 100%;
   display: flex;
@@ -650,9 +650,7 @@ h2 {
   overflow-x: auto;
   scroll-behavior: smooth;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  height: 100%;                  /* чтобы фото растягивались по высоте блока */
+                /* чтобы фото растягивались по высоте блока */
 }
 
 .carousel li {
@@ -739,5 +737,23 @@ h2 {
 .df {
   padding: 5px;
 }
+body {
+  background-image: none;
+  background-color: #f0f0f0;
+}
+.co img {
+  display: none;
+}
+
+.co {
+  position: static;
+}
+
+/* Обёртка карты */
+.map-overlay {
+    left: 15%;
+    transform: translateX(-50%);
+    
+  }
 
 }
